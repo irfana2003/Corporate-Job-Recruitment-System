@@ -1,0 +1,14 @@
+package com.klef.ep.services;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import com.klef.ep.models.Seeker;
+
+@Remote
+public interface SeekerService
+{
+	public String addEmployee(Seeker emp);
+	public Seeker EmployeeLogin(String email,String pwd);
+}

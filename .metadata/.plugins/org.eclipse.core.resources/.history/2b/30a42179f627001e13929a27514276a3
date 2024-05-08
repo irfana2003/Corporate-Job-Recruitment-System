@@ -1,0 +1,1 @@
+public Seeker SeekerLogin(String email,String pwd);

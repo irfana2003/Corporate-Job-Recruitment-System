@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+   <%@page import="com.klef.ep.services.SeekerService"%>
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="com.klef.ep.models.Seeker"%>
+<%
+
+InitialContext context = new InitialContext();
+SeekerService seekerService = (SeekerService) context.lookup("");
+
+
+String sfname = request.getParameter("firstname");
+String slname = request.getParameter("lastname");
+String sname = request.getParameter("username");
+String semail = request.getParameter("email");
+String sphoneno = request.getParameter("phoneno");
+String sage = request.getParameter("age");
+String spassword = request.getParameter("pwd");
+String saddress = request.getParameter("address");
+String scity = request.getParameter("city");
+String spostalcode = request.getParameter("postalcode");
+String scountry = request.getParameter("country");
+
+
+
+Seeker emp = new Seeker();
+
+emp.setFirstname(sfname);
+emp.setLastname(slname);
+emp.setUsername(sname);
+emp.setEmail(semail);
+emp.setPhoneno(sphoneno);
+emp.setAge(sage);
+emp.setPassword(spassword);
+emp.setAddress(saddress);
+emp.setCity(scity);
+emp.setPostalcode(spostalcode);
+emp.setCountry(scountry);
+
+seekerService.addSeeker(emp);
+
+response.sendRedirect("seekerlogin.jsp");
+
+
+%>

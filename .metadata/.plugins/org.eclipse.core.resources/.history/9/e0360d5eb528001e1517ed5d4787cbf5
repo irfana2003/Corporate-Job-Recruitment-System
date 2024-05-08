@@ -1,0 +1,60 @@
+package com.klef.ep.services;
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.klef.ep.models.Recruiter;
+
+@Stateless
+@TransactionManagement(TransactionManagementType.BEAN)
+public class RecruiterServiceImpl  implements RecruiterService
+{
+	public String addRecruiter(Recruiter rec) 
+	{
+	  EntityManagerFactory er = Persistence.createEntityManagerFactory("jpa");
+   	  EntityManager erec = er.createEntityManager();
+   	  
+   	  erec.getTransaction().begin();
+   	  erec.persist(rec);     // insert operation
+   	  erec.getTransaction().commit();
+   	  
+   	  erec.close();
+   	  er.close();
+   	  
+   	  return "Recruiter Recorded Successfully";
+	}
+	@Override
+	public Recruiter RecruiterLogin(String remail, String rpassword) 
+	{
+		 EntityManagerFactory er = Persistence.createEntityManagerFactory("jpa");
+      	 EntityManager erec = er.createEntityManager();
+      	  
+         erec.getTransaction().begin();
+         
+         Query qry = erec.createQuery("  select r from recruiter e where semail=? and spassword=?   "); // atmost one object (0 or 1)
+	     qry.setParameter(1, remail);
+	     qry.setParameter(2, rpassword);
+	     
+	     Seeker emp = null;
+	     
+	     if(qry.getResultList().size() > 0) 
+	     {
+	    	    emp = (Seeker) qry.getSingleResult();
+	     }
+	     
+	     erec.close();
+	     emf.close();
+	   
+	     return emp;
+	}
+
+
+
+}

@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+   <%@page import="com.klef.ep.services.RecruiterService"%>
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="com.klef.ep.models.Recruiter"%>
+<%
+
+InitialContext context = new InitialContext();
+RecruiterService seekerService = (RecruiterService) context.lookup("java:global/EPProject/RecruiterServiceImpl!com.klef.ep.services.RecruiterService");
+
+
+String rfname = request.getParameter("rfname");
+String rcname = request.getParameter("rcname");
+String rname = request.getParameter("rname");
+String remail = request.getParameter("remail");
+String rphoneno = request.getParameter("rphoneno");
+String rage = request.getParameter("rage");
+String rpassword = request.getParameter("rpassword");
+String raddress = request.getParameter("raddress");
+String rcity = request.getParameter("rcity");
+String rpostalcode = request.getParameter("rpostalcode");
+String rcountry = request.getParameter("rcountry");
+
+
+
+Recruiter rec = new Recruiter();
+
+emp.setFirstname(sfname);
+emp.setLastname(slname);
+emp.setUsername(sname);
+emp.setEmail(semail);
+emp.setPhoneno(sphoneno);
+emp.setAge(sage);
+emp.setPassword(spassword);
+emp.setAddress(saddress);
+emp.setCity(scity);
+emp.setPostalcode(spostalcode);
+emp.setCountry(scountry);
+
+seekerService.addSeeker(emp);
+
+response.sendRedirect("addseekersuc.jsp");
+
+
+%>

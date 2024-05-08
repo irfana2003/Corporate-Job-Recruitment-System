@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\Users\pappa\OneDrive\Desktop\EP\MMIProject\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2389420843.index
+4242771250.index
+2008251770.index
+1694227899.index
+3057029187.index
+4100822433.index
+3057029187.index
+2903597934.index

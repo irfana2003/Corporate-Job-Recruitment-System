@@ -1,0 +1,15 @@
+package com.klef.ep.services;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import com.klef.ep.models.Seeker;
+
+@Remote
+public interface RecruiterService
+{
+	public String addRecruiter(Recruiter rec);
+	public  RecuiterLogin(String remail,String rpassword);
+	
+}

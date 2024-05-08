@@ -1,0 +1,12 @@
+
+Jul 22, 2023 14:59:11.578 NEW SESSION
+Jul 22, 2023 14:59:11.578 [15224:16368:0722/145911.574:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+Jul 22, 2023 14:59:12.122 [15224:18712:0722/145912.122:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -111
+Jul 22, 2023 15:14:39.646 [15224:18712:0722/151439.644:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Jul 22, 2023 15:14:40.828 [15224:18712:0722/151440.828:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -111
+Jul 22, 2023 15:30:11.166 [15224:18712:0722/153011.164:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Jul 22, 2023 15:30:12.906 [15224:18712:0722/153012.906:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -111
+Jul 22, 2023 15:45:42.643 [15224:18712:0722/154542.643:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Jul 22, 2023 15:45:43.657 [15224:18712:0722/154543.657:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -111
+Jul 22, 2023 16:01:06.633 [15224:18712:0722/160106.633:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Jul 22, 2023 16:01:09.190 [15224:18712:0722/160109.189:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -111

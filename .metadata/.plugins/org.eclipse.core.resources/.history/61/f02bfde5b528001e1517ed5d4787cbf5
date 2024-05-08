@@ -1,0 +1,46 @@
+package com.klef.ep.models;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "recruiter_table")
+public class Recruiter implements Serializable
+{
+
+
+	private static final long serialVersionUID = 1L;
+@Id //primary key
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+  private long id;
+  @Column(name = "rfname", length = 50, nullable = false)
+  private String firstname;
+  @Column(name = "rlname", length = 50, nullable = false)
+  private String lastname;
+  @Column(name = "rname", length = 50, nullable = false)
+  private String username;
+  @Column(name = "remail", length = 50, nullable = false, unique = true)
+  private String email;
+  @Column(name = "rphoneno", length = 12, nullable = false)
+  private String phoneno;
+  @Column(name = "rage", length = 03, nullable = false)
+  private String age;
+  @Column(name = "rpassword", length = 50, nullable = false)
+  private String password;
+  @Column(name = "raddress", length = 50, nullable = false)
+  private String address;
+  @Column(name = "rcity", length = 50, nullable = false)
+  private String city;
+  @Column(name = "rpostalcode", length = 8, nullable = false)
+  private String postalcode;
+  @Column(name = "rcountry", length = 12, nullable = false)
+  private String country;
+  
+	
+}
